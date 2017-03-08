@@ -4,13 +4,24 @@ $red  = #DC493A
 $blue = #4392F1
 $sec  = #95818D
 $sam  = #E3C0D3
+$yellow = #EEC643
+$green = #218380
+$orange = #F68E5F
+$pink = #E0607E
+
+$ivory = #F4e8c1
+$azul = #a0c1b8
+$bolivia = #709fb8
+$jac = #726a95
+$malbec = #351f39
+
 
 *
-    margin 0
-    padding 0
-    border 0
-    text-decoration: none
-    transition: all 0.3s ease-in-out
+  margin 0
+  padding 0
+  border 0
+  text-decoration: none
+  transition: all 0.3s ease-in-out
 
 html
     background-color $sam
@@ -22,7 +33,7 @@ header
   display: flex;
   position: fixed;
   z-index: 3
-  box-shadow: 3px 0px 3px 0px rgba(0,0,0,0.7);
+  box-shadow: 3px 0px 3px 0px rgba(0,0,0,0.3);
 
   nav
     flex 1
@@ -69,7 +80,6 @@ header
 
         hr
           width: 33%
-          background-color: $red
 
 
 
@@ -77,7 +87,6 @@ body
     font-family 'Quicksand', sans-serif
     font-weight 200
     display: flex
-    flex-wrap: warp;
     margin-bottom: 300px
 
 .group
@@ -95,28 +104,25 @@ article
     margin 15px
     color: #fff
 
+    .container
+      display: flex;
+
+
     h3
       color #fff
       padding: 50px
       font-size 60px
       font-weight: 300
-      flex 1
-      flex-basis: 100%
-
-    .container
-      display: flex
-      flex-wrap: wrap;
-      align-content: space-around;
 
     p
       padding: 15px
-      flex 3
+      font-size: 19px
 
 a
     text-decoration none
 
 #main
-    background-color $blue
+    animation: rainbow 10s alternate infinite
 
 .group
   &:after
@@ -153,6 +159,7 @@ footer
     padding-top: 10px
     position: relative;
     bottom -40px
+    flex 1
 
   ul
     width: 100%
@@ -200,8 +207,7 @@ footer
 
 figure
     margin 30px
-    position relative
-    flex 1
+    flex 3
 
 
 figure:hover
@@ -230,3 +236,27 @@ figure
     font-size: 0px
 hr
   width: 0px
+
+
+@keyframes rainbow
+  0%
+    background-color: $blue
+  20%
+    background-color: $red
+  40%
+    background-color: $orange
+  60%
+    background-color: $yellow
+  80%
+   background-color: $green
+  100%
+    background-color: $pink
+
+
+@media (max-width: 1350px)
+  article
+    .container
+      display: block;
+
+  img
+    width: 50%
